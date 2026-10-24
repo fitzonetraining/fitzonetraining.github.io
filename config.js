@@ -6,7 +6,6 @@ window.COACH = {
   // Base de datos. Vacío = modo demo (datos de ejemplo solo en el navegador). Solo va la clave anon, NUNCA service_role.
   supabase: { url: 'https://jukpaqtriemqvxormrgb.supabase.co', anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp1a3BhcXRyaWVtcXZ4b3JtcmdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAzODY1ODQsImV4cCI6MjEwNTk2MjU4NH0.4PPIVK2HvvgwrGEtNVn7CozqDCldvlFWnK2rpgrOmHE', schema: 'carlos' },
   diasPrimerMes: 30,   // días de mensualidad con que arranca un cliente nuevo (el primer mes ya viene pagado)
-  vapidPublic: 'BChbPR0qddt1X25wPlCbS-MCVnejvN87lKOypiJu3VtP8vse6X_iAfNWH-iEh8U_MUCMsspyCxuEhD6-3PKxJk8',   // clave pública de notificaciones push
   claveDemo: 'coach',   // solo modo demo;   
   servicios: [
     ['Guía nutricional', 'apple'], ['Plan alimenticio (Dieta)', 'plate'], ['Chequeo InBody mensual', 'scale'],
