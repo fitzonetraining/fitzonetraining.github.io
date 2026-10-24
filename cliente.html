@@ -1,0 +1,196 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi plan · Carlos Silva</title><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#05090d">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Outfit:wght@300;400;600;800&display=swap"><link rel="stylesheet" href="estilos.css">
+<style>html{background:#05090d}body{background:radial-gradient(120% 60% at 50% -10%,#0b3a44 0,#05090d 60%) no-repeat}main{max-width:560px;margin:auto;padding:0 16px 40px}
+.top{position:sticky;top:0;z-index:5;background:#05090df2;backdrop-filter:blur(10px);padding:14px 0 10px;margin:0 -16px;padding-inline:16px}
+.hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.hd h1{font-family:Orbitron;font-weight:900;font-size:30px;letter-spacing:.02em}.hd small{display:block;color:var(--mut);font-size:13px}
+.wk{display:flex;justify-content:space-between;gap:6px;margin-bottom:12px}.wk button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#0d1a22;font-weight:600;position:relative;color:var(--ink);flex:none}
+.wk button[aria-pressed=true]{background:var(--neon);color:#03181c;border-color:var(--neon);box-shadow:0 0 18px #19e3ee66}.wk button.hoy:not([aria-pressed=true]){border-color:var(--neon)}
+.wk button i{position:absolute;bottom:-1px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--ok)}.wk button.des{opacity:.55}
+.seg{display:flex;background:#0d1a22;border:1px solid var(--line);border-radius:999px;padding:3px}.seg button{flex:1;border:0;background:none;color:var(--mut);border-radius:999px;min-height:46px;font-size:11px;display:flex;flex-direction:column;gap:2px;align-items:center;justify-content:center;padding:4px 2px}.seg button[aria-selected=true]{background:#19e3ee22;color:var(--neon);font-weight:700;box-shadow:inset 0 0 0 1px #19e3ee66}
+.sec-t{display:flex;justify-content:space-between;align-items:baseline;margin:16px 0 4px}.sec-t b{font-size:17px}.sec-t span{color:var(--mut);font-size:13px}.bar{height:6px;background:#0d1a22;border-radius:9px;overflow:hidden;margin-bottom:6px}.bar i{display:block;height:100%;background:var(--neon);transition:width .3s}
+.it{display:grid;grid-template-columns:64px 1fr 44px;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #ffffff14}.it .th{width:64px;height:64px;border-radius:50%;overflow:hidden;background:#08121a;border:1px solid var(--line);padding:0;display:grid;place-items:center}
+.it .th svg{width:150%;max-width:none;height:auto;background:none;border-radius:0}.it .th img{width:100%;height:100%;object-fit:cover}
+.it .tx{background:none;border:0;text-align:left;padding:0;color:var(--ink)}.it .tx b{display:block;font-weight:600;font-size:17px;line-height:1.2}.it .tx small{color:var(--mut);font-size:14px}
+.ck{width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:none;color:transparent;font-size:20px}.ck[aria-pressed=true]{background:var(--ok);border-color:var(--ok);color:#03181c}.it.ok .tx{opacity:.55}
+.rest{text-align:center;padding:46px 10px;color:var(--mut)}.rest b{display:block;font-size:20px;color:var(--ink);margin-bottom:6px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:14px 0}.k b{display:block;font-size:24px}.k small{color:var(--mut)}.ok-c{color:var(--ok)}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:6px;border-bottom:1px solid var(--line);text-align:left}.vacio{text-align:center;padding:40px 10px;color:var(--mut)}
+.dl{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}#dReg{padding:0}#dReg .in{padding:18px}.tmr{background:linear-gradient(150deg,#0f2833,#08141b);border:1px solid #19e3ee55;border-radius:18px;padding:14px;text-align:center;margin:12px 0}
+.tmr .v{font-family:Orbitron;font-weight:900;font-size:46px;line-height:1;text-shadow:0 0 22px #19e3ee88}.tmr.fin .v{color:var(--ok);animation:pulse .6s infinite alternate}.tmr small{color:var(--mut)}
+@keyframes pulse{to{transform:scale(1.07)}}.tmr .bar{margin:10px 0}.tmr .bt{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.sr{display:grid;grid-template-columns:28px 1fr 1fr 48px;gap:8px;align-items:center;margin-top:8px}.sr input{min-height:46px;text-align:center;font-size:18px;font-weight:600}.sr .n{color:var(--mut);font-weight:700;text-align:center}
+.sr .ck{width:48px;height:48px;font-size:22px}.sr.hd{color:var(--mut);font-size:12px;margin-top:12px}.sr.hd span{text-align:center}
+#pill{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:30;background:#0b2a33;border:1px solid var(--neon);color:#fff;border-radius:999px;padding:10px 18px;font-weight:700;box-shadow:0 0 24px #19e3ee66;display:none;gap:10px;align-items:center}
+#pill.on{display:flex}#pill b{font-family:Orbitron;font-size:18px;color:var(--neon)}#pill.fin{border-color:var(--ok)}#pill.fin b{color:var(--ok)}
+.pr{display:inline-block;background:#ffc85722;color:var(--warn);border:1px solid #ffc85755;border-radius:999px;font-size:12px;padding:1px 9px;margin-left:6px}
+details.card summary{cursor:pointer;font-weight:600;min-height:32px}</style></head><body>
+<div id="pill" role="timer" aria-live="off" data-reabrir></div><main id="m"><p class="vacio">Cargando tu plan…</p></main><div id="print-root"></div>
+<script src="config.js"></script><script src="charts.js"></script><script src="ejercicios.js"></script><script src="app.js"></script><script src="ui.js"></script><script src="ficha.js"></script><script>
+const {esc,fecha,hoy,Doc,Link,wa,diaSem}=CS,C=COACH;let c=null,tab='res',sel=0;
+const LS={get:k=>{try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const DN=['L','M','M','J','V','S','D'],DL=['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
+const hoyIdx=()=>(new Date().getDay()+6)%7,iso=n=>{const d=new Date();d.setDate(d.getDate()-hoyIdx()+n);return CS.ymd(d)};
+const clave=()=>'cs_cli_'+(c.nombre||'')+'_'+(c.creado||''),Sv=CS.Store;let cache={};const hechos=()=>CS.remoto?cache:(LS.get(clave())||c.marcas||{});
+const rutinaDia=n=>c.rutina?c.rutina.dias.find((_,i)=>diaSem(c.rutina,i)===n):null;
+const ic={res:'<svg class="ico" viewBox="0 0 24 24" style="width:18px;height:18px"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>',ent:'<svg class="ico" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M3 9v6M6 6v12M18 6v12M21 9v6M6 12h12"/></svg>',com:'<svg class="ico" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M7 3v8a2 2 0 0 0 2 2v8M11 3v8M5 3v8M17 3c-2 2-3 5-3 8h3v10"/></svg>',pro:'<svg class="ico" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg>',ej:'<svg class="ico" viewBox="0 0 24 24" style="width:18px;height:18px"><circle cx="12" cy="5" r="2"/><path d="M6 21l2-9-3-3 4-2h6l4 2-3 3 2 9M9 12h6"/></svg>'};
+async function cargar(){const q=new URLSearchParams(location.search),h=new URLSearchParams(location.hash.slice(1));
+ try{  if(h.get('p')){const o=await Link.decodificar(h.get('p'));(o.custom||[]).forEach(x=>{if(!EJ.get(x.id)){const e=EJ.agregarPersonalizado(x);e.id=x.id}});return o}
+  if(q.get('demo')&&!CS.remoto){const k=CS.Store.cliente(q.get('demo'));if(k)return Link.paquete(k)}}catch(e){console.warn(e)}return null}
+const detalle=x=>{const r=/^\d+$/.test(String(x.reps).trim())?x.reps+' repeticiones':x.reps;return [x.series+' series',r,x.kg?x.kg+' kg':'',x.desc].filter(Boolean).join(' · ')};
+function lista(d,fecha){const h=hechos()[fecha]||[];return d.ej.map((x,j)=>{const e=EJ.get(x.id);if(!e)return '';const ok=h.includes(j);
+ return `<div class="it ${ok?'ok':''}"><span class="th" data-ej="${esc(e.id)}" role="button" tabindex="0" aria-label="Ver ${esc(e.n)}">${EJ.miniatura(e)}</span><button class="tx" data-reg="${j}"><b>${esc(e.n)}</b><small>${esc(detalle(x))}</small>${x.nota?`<small><br>${esc(x.nota)}</small>`:''}${resumenHoy(e.id,fecha)}</button><button class="ck" data-ck="${j}" aria-pressed="${ok}" aria-label="Marcar ${esc(e.n)} como hecho">✓</button></div>`}).join('')}
+function vEnt(){const d=rutinaDia(sel),f=iso(sel),fut=sel>hoyIdx();
+ if(!c.rutina)return '<p class="vacio">Tu coach aún no te asigna una rutina.</p>';
+ if(!d)return `<div class="rest"><b>Día de descanso</b>Recupera, hidrátate y duerme bien. 💤</div>`+pdfs();
+ const h=(hechos()[f]||[]).length,n=d.ej.length;
+ return `<div class="sec-t"><b>${esc(d.nombre)}</b><span>${esc(d.foco)}</span></div><div class="bar" role="progressbar" aria-valuenow="${h}" aria-valuemax="${n}"><i style="width:${h/n*100}%"></i></div><small style="color:var(--mut)">${h}/${n} ejercicios${h===n?' · ¡día completo! 🔥':''}${fut?' · aún no es este día':''}</small>${lista(d,f)}${pdfs()}
+ <details class="card"><summary>Reportar a Carlos por WhatsApp</summary><label style="margin-top:8px">Peso de hoy (kg)<input id="pe" type="number" step="0.1" inputmode="decimal"></label><label style="margin-top:8px">Esfuerzo del entreno (1-10)<input id="rp" type="number" min="1" max="10" inputmode="numeric"></label><p style="margin-top:10px"><button class="btn sm" id="rep">Enviar</button></p></details>`}
+function pdfs(){return `<div class="dl"><button class="btn sm" data-pdf="rutina">⬇ Rutina en PDF</button><button class="btn sm" data-pdf="plan">⬇ Plan alimenticio en PDF</button></div>`}
+function vCom(){const p=c.plan;if(!p)return '<p class="vacio">Tu coach aún no te asigna un plan alimenticio.</p>';const f='m'+iso(sel),h=hechos()[f]||[];
+ return `<div class="kpis"><div class="card k"><b>${esc(p.kcal)}</b><small>kcal</small></div><div class="card k"><b>${esc(p.p)} g</b><small>proteína</small></div><div class="card k"><b>${esc(p.c)} g</b><small>carbos</small></div><div class="card k"><b>${esc(p.g)} g</b><small>grasas</small></div></div>`+
+ p.comidas.map((m,i)=>`<div class="it ${h.includes(i)?'ok':''}" style="grid-template-columns:64px 1fr 44px"><span class="th" style="font-weight:700;color:var(--neon);font-size:14px">${esc(m.h)}</span><div class="tx"><b>${esc(m.n)}</b><small>${m.it.map(esc).join(' · ')}</small></div><button class="ck" data-cm="${i}" aria-pressed="${h.includes(i)}" aria-label="Marcar ${esc(m.n)}">✓</button></div>`).join('')+
+ `<p style="color:var(--mut);margin-top:12px">💧 ${esc(p.agua)}. ${esc(p.notas)}</p>`+(c.supl.length?`<div class="sec-t"><b>Suplementación</b></div>`+c.supl.map(s=>`<div class="card" style="margin-bottom:8px"><b>${esc(s.n)}</b> · ${esc(s.dosis)}<br><small style="color:var(--mut)">${esc(s.mom)}</small></div>`).join(''):'')+pdfs()}
+function vPro(){const m=c.medidas,H=hechos();const extra=`<div class="dash" style="margin-top:14px">${cardCheckin()}<div class="glass" style="display:flex;justify-content:space-between;align-items:center;gap:10px"><span><b>Mi ficha de ingreso</b><br><small style="color:var(--mut)">${FICHA&&FICHA.completa?'Completa ✓ · puedes actualizarla o subir exámenes':'Pendiente'}</small></span><button class="btn sm sec" data-ficha>${FICHA&&FICHA.completa?'Editar':'Completar'}</button></div></div>${vCargas()}<div class="sec-t"><b>Mis fotos</b><span>antes y después</span></div><div class="glass" id="cmp"></div>${medCorpHtml()}`;const sem=[0,1,2,3,4,5,6].filter(n=>{const d=rutinaDia(n),h=H[iso(n)];return d&&h&&h.length===d.ej.length}).length,meta=c.rutina?c.rutina.dias.length:0;
+ const bloque=`<div class="kpis"><div class="card k"><b>${sem}/${meta}</b><small>entrenos completos esta semana</small></div>${m.length?`<div class="card k"><b>${esc(m.at(-1).kg)} kg</b><small>último peso</small></div>`:''}</div>`;
+ if(!m.length)return extra+bloque+'<p class="vacio">Aún no hay chequeos InBody. Se hacen una vez al mes.</p>';
+ const a=m[0],z=m.at(-1),dl=(k,inv)=>{const v=z[k]-a[k];return `<span class="${(inv?v<=0:v>=0)?'ok-c':''}">${v>0?'+':''}${v.toFixed(1)}</span>`};
+ return extra+bloque+`<div class="kpis"><div class="card k"><b>${dl('kg')}</b><small>kg de peso</small></div><div class="card k"><b>${dl('gr',1)}</b><small>% grasa</small></div><div class="card k"><b>${dl('mm')}</b><small>kg músculo</small></div></div>
+ <div class="card"><table><tr><th>Fecha</th><th>Peso</th><th>% grasa</th><th>Músculo</th></tr>${m.map(x=>`<tr><td>${esc(fecha(x.f))}</td><td>${esc(x.kg)}</td><td>${esc(x.gr)}</td><td>${esc(x.mm)}</td></tr>`).join('')}</table></div>`+
+ (c.evals.length?`<div class="sec-t"><b>Evaluación técnica</b></div>`+c.evals.slice(-1).map(e=>`<div class="card"><small>${esc(fecha(e.f))}</small><p>${esc(e.nota)}</p>${e.it.map(i=>`<p><b>${esc(EJ.get(i.id)?.n||i.id)}</b> · ${'★'.repeat(i.pt)}${'☆'.repeat(5-i.pt)}<br><small style="color:var(--mut)">${esc(i.n)}</small></p>`).join('')}</div>`).join(''):'')+`<div class="dl"><button class="btn sm sec" data-pdf="progreso">⬇ Mi progreso en PDF</button></div>`}
+function vEj(){return EJ.grupos.map(g=>`<div class="sec-t"><b>${esc(g)}</b></div>`+EJ.lista.filter(e=>e.gr===g).map(e=>`<div class="it" style="grid-template-columns:64px 1fr"><span class="th" data-ej="${esc(e.id)}">${EJ.miniatura(e)}</span><button class="tx" data-ej="${esc(e.id)}"><b>${esc(e.n)}</b><small>${esc(e.mus)}</small></button></div>`).join('')).join('')}
+const {M}=CS,fi=n=>CS.dias(n);
+let FICHA=null,SERIES=[],T=null,AC=null,reg=null,iv=null,wl=null;
+const fmt=n=>String(+(+n).toFixed(1)).replace('.',','),mmss=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+const setsDe=(e,f)=>SERIES.filter(x=>x.e===e&&x.f===f).sort((a,b)=>a.s-b.s);
+const resumenHoy=(e,f)=>{const s=setsDe(e,f);return s.length?`<small style="color:var(--neon)"><br>Hoy: ${s.map(x=>fmt(x.kg)+'×'+x.r).join(' · ')}</small>`:''};
+function beep(){try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();[0,.22,.44].forEach((t,i)=>{const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=i===2?1040:780;o.connect(g);g.connect(AC.destination);g.gain.setValueAtTime(.2,AC.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+t+.18);o.start(AC.currentTime+t);o.stop(AC.currentTime+t+.2)})}catch(e){}}
+function iniciarT(tipo,secs,etiqueta,j,s){try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();AC.resume&&AC.resume()}catch(e){}T={tipo,total:secs,fin:Date.now()+secs*1000,etq:etiqueta,j,s,hecho:false};clearInterval(iv);iv=setInterval(tick,250);tick()}
+function tick(){if(!T)return;const r=Math.max(0,Math.ceil((T.fin-Date.now())/1000)),fin=r===0;
+ const pill=document.getElementById('pill'),dg=document.getElementById('dReg'),abierto=dg&&dg.open;
+ if(pill){pill.className=(abierto?'':'on ')+(fin?'fin':'');pill.innerHTML=`<span>${T.tipo==='trabajo'?'⏱ Serie':'⏳ Descanso'}</span><b>${fin?'¡YA!':mmss(r)}</b>`}
+ const v=document.getElementById('tv');if(v){v.textContent=fin?'¡Siguiente serie!':mmss(r);document.getElementById('tb').style.width=(r/T.total*100)+'%';document.getElementById('tt').textContent=(T.tipo==='trabajo'?'Serie en curso · ':'Descanso · ')+T.etq;document.getElementById('tm').classList.toggle('fin',fin)}
+ if(fin&&!T.hecho){T.hecho=true;beep();try{navigator.vibrate&&navigator.vibrate([250,120,250,120,400])}catch(e){}
+  try{if(document.hidden&&Notification.permission==='granted')new Notification(T.tipo==='trabajo'?'¡Serie terminada!':'¡Termina el descanso!',{body:T.etq})}catch(e){}
+  if(T.tipo==='trabajo'&&reg&&reg.j===T.j){guardarSet(T.s,T.total)}}}
+function detenerT(){T=null;clearInterval(iv);const p=document.getElementById('pill');if(p)p.className='';const v=document.getElementById('tm');if(v)v.hidden=true}
+const clampN=(x)=>Math.max(1,Math.min(12,parseInt(x.series)||3));
+function abrirReg(j){const d=rutinaDia(sel);if(!d)return;const x=d.ej[j],e=EJ.get(x.id);if(!e)return;reg={j,x,e,f:iso(sel),vals:{}};let dg=document.getElementById('dReg');
+ if(!dg){dg=document.createElement('dialog');dg.id='dReg';dg.setAttribute('aria-label','Registro de series');document.body.appendChild(dg);dg.addEventListener('close',()=>{try{wl&&wl.release();wl=null}catch(e){}tick();pintar()})}
+ pintarReg();dg.showModal();try{navigator.wakeLock&&navigator.wakeLock.request('screen').then(l=>wl=l).catch(()=>{})}catch(e){}}
+function pintarReg(){const dg=document.getElementById('dReg');if(!dg||!reg)return;const {j,x,e,f}=reg,n=clampN(x),W=CS.trabajo(x.reps),hoyS=setsDe(e.id,f),
+ fechas=[...new Set(SERIES.filter(s=>s.e===e.id&&s.f<f).map(s=>s.f))].sort(),ant=fechas.length?setsDe(e.id,fechas.at(-1)):[],mj=CS.SR.mejor(SERIES.filter(s=>s.f<f),e.id);
+ const filas=[...Array(n)].map((_,i)=>{const s=i+1,g=hoyS.find(q=>q.s===s),pv=ant.find(q=>q.s===s),v=reg.vals[s]||{},kg=g?g.kg:(v.kg??(pv?pv.kg:(x.kg||''))),r=g?g.r:(v.r??'');
+  return `<div class="sr"><span class="n">${s}</span><input id="k${s}" inputmode="decimal" value="${esc(kg===''?'':fmt(kg))}" placeholder="kg" aria-label="Kilos serie ${s}" data-v="kg" data-s="${s}"><input id="r${s}" inputmode="numeric" value="${esc(r)}" placeholder="${W?W+' s':esc(CS.repsObj(x.reps)||'reps')}" aria-label="${W?'Segundos':'Repeticiones'} serie ${s}" data-v="r" data-s="${s}">
+  <button class="ck" data-ok="${s}" aria-pressed="${!!g}" aria-label="Guardar serie ${s}">${W&&!g?'▶':'✓'}</button></div>`}).join('');
+ dg.innerHTML=`<div class="in"><button class="btn sec sm" style="float:right" data-cerrar aria-label="Cerrar">✕</button><h2 style="font-size:20px">${esc(e.n)}</h2><small style="color:var(--mut)">Meta: ${esc(detalle(x))}</small>
+ <div id="tm" class="tmr" ${T?'':'hidden'}><small id="tt"></small><div class="v" id="tv">0:00</div><div class="bar"><i id="tb" style="width:100%"></i></div><div class="bt"><button class="btn sm sec" data-t15="-15">−15 s</button><button class="btn sm sec" data-t15="15">+15 s</button><button class="btn sm" data-tstop>Saltar</button></div></div>
+ ${ant.length||mj?`<p style="margin:10px 0 0;color:var(--mut);font-size:14px">${ant.length?`Última vez: ${ant.map(q=>fmt(q.kg)+'×'+q.r).join(' · ')}`:''}${mj?`<br>Récord: <b style="color:var(--warn)">${fmt(mj.kg)} kg × ${mj.r}</b> 🏆`:''}</p>`:''}
+ <div class="sr hd"><span></span><span>${W?'KG (opcional)':'KG (el máximo de la serie)'}</span><span>${W?'SEGUNDOS':'REPS'}</span><span></span></div>${filas}
+ <p style="margin-top:14px;color:var(--mut);font-size:13px">${W?'Toca ▶ para iniciar el tiempo de la serie. ':''}Al guardar cada serie arranca el descanso de ${mmss(CS.seg(x.desc))}.</p>
+ <p style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn sec sm" data-ej="${esc(e.id)}">Ver cómo se hace</button><button class="btn sm" data-cerrar>Listo</button></p><p id="rm" role="status" style="min-height:20px;color:var(--warn);margin-top:6px"></p></div>`;
+ if(T)tick()}
+async function guardarSet(s,rAuto){if(!reg)return;const {j,x,e,f}=reg,W=CS.trabajo(x.reps),k=document.getElementById('k'+s),r=document.getElementById('r'+s),rm=document.getElementById('rm');
+ const kg=k?parseFloat(String(k.value).replace(',','.'))||0:0;let reps=rAuto||parseInt(r&&r.value)||(W&&r&&!r.value?0:0);if(!reps&&W)reps=W;
+ if(!reps){if(rm)rm.textContent='Escribe cuántas repeticiones hiciste.';return}
+ const prev=CS.SR.mejor(SERIES.filter(q=>q.f!==f||q.s!==s),e.id);
+ try{await Sv.series.guardar(c.cid,f,e.id,s,kg,reps)}catch(x2){if(rm)rm.textContent='No se pudo guardar. Revisa tu conexión.';return}
+ SERIES=SERIES.filter(q=>!(q.f===f&&q.e===e.id&&q.s===s));SERIES.push({f,e:e.id,s,kg,r:reps});
+ const n=clampN(x),listo=setsDe(e.id,f).length>=n,pr=kg>0&&(!prev||kg>prev.kg);
+ if(listo){const H=hechos();if(!(H[f]||[]).includes(j))marcar(f,j);detenerT()}else iniciarT('descanso',CS.seg(x.desc),`${e.n} · serie ${s} lista`,j,s);
+ pintarReg();const m=document.getElementById('rm');if(m)m.textContent=pr?'🏆 ¡Nuevo récord personal!':listo?'¡Ejercicio completo! 💪':''}
+function resumenFecha(){}
+function vCargas(){const L=SERIES;if(!L.length)return '';const es=CS.SR.ejercicios(L).map(id=>({id,ses:CS.SR.sesiones(L,id),mj:CS.SR.mejor(L,id)})).filter(x=>EJ.get(x.id)).sort((a,b)=>b.ses.length-a.ses.length).slice(0,6);
+ return `<div class="sec-t"><b>Mis cargas</b><span>peso máximo por sesión</span></div><div class="glass">`+es.map(x=>{const v=x.ses.map(s=>s.max),d=v.length>1?v.at(-1)-v[0]:0;return `<div class="tr" style="grid-template-columns:1fr auto auto;padding:8px 0"><span><b>${esc(EJ.get(x.id).n)}</b><br><small style="color:var(--mut)">Récord <b style="color:var(--warn)">${fmt(x.mj.kg)} kg</b> × ${x.mj.r}</small></span>${CH.spark(v,{w:76,h:30})}<b class="${d>0?'up':d<0?'dw':''}">${d>0?'▲ ':d<0?'▼ ':''}${fmt(Math.abs(d))} kg</b></div>`}).join('')+`</div>`}
+let FOTOS=[],pickV=null;
+const nF=f=>FOTOS.filter(x=>x.f===f).length,VN={frente:'Frente',lateral:'Lateral',espalda:'Espalda'};
+function avisosHtml(){const o=[],d=CS.venceDias(c),v=CS.ventana(),n=nF(v.fecha),u=c.medidas.at(-1),prox=u?Math.ceil((new Date(u.f).getTime()+30*864e5-Date.now())/864e5):null;
+ if(d!=null&&d<=7){const t=d<0?`Tu mensualidad venció hace ${-d} día${d<-1?'s':''}`:d===0?'Tu mensualidad vence hoy':`Tu mensualidad vence en ${d} día${d===1?'':'s'} (${fecha(c.vence)})`;
+  o.push(`<div class="av ${d<=3?'r':'w'}" role="status"><span>⏳ ${t}</span><a class="btn sm" href="${wa(C.wa,'Hola Carlos, soy '+c.nombre+'. Quiero renovar mi mensualidad.')}" target="_blank" rel="noopener">Renovar</a></div>`);CS.notificar('vence',t,'Escríbele a Carlos para renovar y no perder tu ritmo.')}
+ if(v.estado!=='proximo'){if(n>=3)o.push(`<div class="av g" role="status"><span>✓ Check-in enviado. ¡Gracias!</span></div>`);else{const t=v.estado==='aviso'?'Mañana sábado es tu check-in':v.estado==='hoy'?'Hoy es tu check-in':'Te faltan fotos de tu check-in';
+  o.push(`<div class="av" role="status"><span>📸 ${t}: sube tus 3 fotos (${n}/3)</span><button class="btn sm" data-t="pro">Subir</button></div>`);CS.notificar('checkin',t,'Sube tus fotos de frente, lateral y espalda en tu portal.')}}
+ if(!FICHA||!FICHA.completa)o.push(`<div class="av w" role="status"><span>📝 ${FICHA?'Termina':'Completa'} tu ficha de ingreso (5 min)</span><button class="btn sm" data-ficha>${FICHA?'Continuar':'Empezar'}</button></div>`);
+ if(prox!=null&&prox<=3)o.push(`<div class="av w" role="status"><span>📊 Esta semana toca tu chequeo InBody</span></div>`);
+ if('Notification' in window&&Notification.permission==='default'&&o.length)o.push(`<div class="av"><span>🔔 Activa los avisos en este celular</span><button class="btn sm sec" id="nt">Activar</button></div>`);
+ return o.join('')}
+function cardCheckin(){const v=CS.ventana(),n=nF(v.fecha);
+ if(!v.puede&&n===0)return `<div class="glass"><h3>Próximo check-in</h3><b class="or" style="font-size:18px">Sábado ${esc(fecha(v.fecha))}</b><p style="color:var(--mut);margin-top:6px">El viernes desde el mediodía podrás subir tus 3 fotos: frente, lateral y espalda. Te avisaremos.</p></div>`;
+ const sl=Object.keys(VN).map(k=>{const ok=FOTOS.some(x=>x.f===v.fecha&&x.v===k);return `<button class="slot ${ok?'ok':''}" data-pick="${k}" aria-label="${ok?'Cambiar':'Subir'} foto ${VN[k].toLowerCase()}">${ok?`<img data-pv="${k}" alt="Tu foto de ${VN[k].toLowerCase()}">`:'<b>＋</b>'}<span>${VN[k]}${ok?' ✓':''}</span></button>`}).join('');
+ return `<div class="glass"><h3>Check-in · sábado ${esc(fecha(v.fecha))}</h3><div style="display:flex;align-items:center;gap:10px"><b class="or" style="font-size:20px">${n}/3</b><span style="color:var(--mut);font-size:14px">${n>=3?'¡Listo! Carlos ya puede hacer tu comparativa.':'Sube las 3 fotos para tu comparativa.'}</span></div><div class="slots">${sl}</div>
+ <input type="file" accept="image/*" id="fi" hidden><p id="fe" role="alert" style="color:var(--bad);min-height:18px;font-size:13px"></p>
+ <details><summary style="cursor:pointer;color:var(--mut);font-size:14px;min-height:32px">Cómo tomar las fotos</summary><ul style="margin:6px 0 0 18px;color:var(--mut);font-size:14px"><li>Cuerpo completo, de pies a cabeza.</li><li>Luz pareja y fondo liso; ropa ajustada o deportiva.</li><li>Cámara a la altura del ombligo y siempre a la misma distancia.</li><li>Frente: brazos relajados. Lateral: brazos al costado. Espalda: igual que de frente.</li></ul></details>
+ <p style="color:var(--mut);font-size:12px;margin-top:8px">🔒 Solo tú y Carlos ven estas fotos.</p></div>`}
+function medCorpHtml(){const mc=c.medcorp||[];if(!mc.length)return '';const a=mc[0],z=mc.at(-1);
+ return `<div class="sec-t"><b>Medidas corporales</b><span>${esc(fecha(z.f))}</span></div><div class="glass"><table class="mct"><tr><th>Zona</th><th>Inicio</th><th>Hoy</th><th>Cambio</th></tr>${CS.MC.filter(x=>z[x[0]]!=null).map(([k,n])=>{const d=mc.length>1?z[k]-a[k]:0;return `<tr><td>${n}</td><td>${a[k]??'—'}</td><td><b>${z[k]}</b></td><td class="${d?'ne':''}">${mc.length>1?(d>0?'▲ ':d<0?'▼ ':'')+Math.abs(d).toFixed(1).replace('.',',')+' cm':'—'}</td></tr>`}).join('')}</table></div>`}
+function vRes(){const H=hechos(),hi=hoyIdx(),pw=M.pct(c,H,0,7),racha=M.racha(c,H),dh=rutinaDia(hi),hh=(H[iso(hi)]||[]).length,m=c.medidas,u=m.at(-1),a=m[0],p=c.plan;
+ const sem=[0,1,2,3,4,5,6].map(n=>{const d=rutinaDia(n),h=(H[iso(n)]||[]).length;return d?Math.min(100,Math.round(h/d.ej.length*100)):0});
+ const msg=pw==null?'Tu coach está preparando tu plan.':pw>=80?'¡Estás imparable! Así se construye un cuerpo fuerte. 💪':pw>=50?'Buen ritmo. Un entreno más y cierras la semana fuerte.':'Cada repetición suma. Empieza hoy, Carlos cuenta contigo.';
+ const dl=(v,inv)=>`<span class="${(inv?v<=0:v>=0)?'up':'dw'}">${v>0?'▲':v<0?'▼':'•'} ${Math.abs(v).toFixed(1).replace('.',',')}</span>`;
+ const tile=(t,k,u2,inv)=>m.length?`<div class="glass" style="padding:14px"><h3 style="margin-bottom:4px">${t}</h3><b class="or" style="font-size:22px;font-weight:900">${esc(u[k])}<small style="font-size:12px;color:var(--mut)"> ${u2}</small></b><div style="display:flex;justify-content:space-between;align-items:end;margin-top:4px">${m.length>1?dl(u[k]-a[k],inv):'<span></span>'}${CH.spark(m.map(x=>x[k]),{w:70,h:28,color:inv?'#ff9f1c':'#19e3ee'})}</div></div>`:'';
+ const prox=u?Math.ceil((new Date(u.f).getTime()+30*864e5-Date.now())/864e5):null;
+ return `<div class="dash" style="margin-top:14px">
+ <div class="glass hero-d" style="text-align:center"><small class="ne or" style="letter-spacing:.18em">TU SEMANA</small><div style="margin:8px 0">${CH.anillo(pw||0,{size:168,w:15,sub:'cumplido',aria:'Cumplimiento semanal '+Math.round(pw||0)+'%'})}</div>
+  <p style="max-width:30ch;margin:0 auto 12px;color:var(--ink)">${msg}</p><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><span class="pill2 w">🔥 Racha ${racha} día${racha===1?'':'s'}</span><span class="pill2 g">${M.completos(c,H,0,7)} entrenos completos</span></div></div>
+ ${dh?`<div class="glass"><h3>Hoy</h3><div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><b style="font-size:19px">${esc(dh.nombre)}</b><br><small style="color:var(--mut)">${esc(dh.foco)} · ${hh}/${dh.ej.length} ejercicios</small></div><button class="btn sm" data-t="ent">${hh?'Continuar':'Empezar'} →</button></div><div class="bar" style="margin:12px 0 0"><i style="width:${hh/dh.ej.length*100}%"></i></div></div>`:`<div class="glass"><h3>Hoy</h3><b style="font-size:19px">Día de descanso 💤</b><br><small style="color:var(--mut)">Recupera y come bien. Mañana seguimos.</small></div>`}
+ <div class="glass"><h3>Constancia semanal</h3>${CH.barras(sem,{h:84,labels:DN,hoy:hi,max:100,aria:'Cumplimiento por día'})}</div>
+ ${p?`<div class="glass"><h3>Tu nutrición</h3><div style="display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap">${CH.donut([{v:p.p*4,color:'#19e3ee'},{v:p.c*4,color:'#3ddc97'},{v:p.g*9,color:'#ffc857'}],{size:128,w:18,centro:p.kcal,sub:'kcal',aria:'Distribución de macros'})}<div class="leg"><span><i style="background:#19e3ee"></i>Proteína <b>${esc(p.p)} g</b></span><span><i style="background:#3ddc97"></i>Carbos <b>${esc(p.c)} g</b></span><span><i style="background:#ffc857"></i>Grasas <b>${esc(p.g)} g</b></span></div></div><p style="text-align:center;margin-top:10px"><button class="btn sec sm" data-t="com">Ver mis comidas</button></p></div>`:''}
+ ${m.length?`<div><div class="sec-t" style="margin-top:0"><b>Mi evolución</b><span>desde ${esc(fecha(a.f))}</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">${tile('Peso','kg','kg',c.obj==='definicion')}${tile('Grasa','gr','%',1)}${tile('Músculo','mm','kg')}<div class="glass" style="padding:14px"><h3 style="margin-bottom:4px">Próximo InBody</h3><b class="or" style="font-size:22px;font-weight:900">${prox<=0?'¡Ya toca!':prox}<small style="font-size:12px;color:var(--mut)">${prox>0?' días':''}</small></b><div style="margin-top:6px;color:var(--mut);font-size:12px">Chequeo mensual con Carlos</div></div></div></div>`:''}</div>`}
+const V={res:vRes,ent:vEnt,com:vCom,pro:vPro,ej:vEj};
+function inactivoUI(){const first=esc(c.nombre.split(' ')[0]);
+ m.innerHTML=`<div class="top"><div class="hd"><div><small>${esc(C.nombre.toUpperCase())} · PERSONAL TRAINER</small><h1>HOLA, ${first.toUpperCase()}</h1></div></div></div>
+ <div class="glass hero-d" style="text-align:center;margin-top:16px"><div style="font-size:44px">🔒</div><h2 class="or" style="font-size:20px;margin:6px 0">${c.vence?'Tu mensualidad venció':'Tu mensualidad aún no está activa'}</h2><p style="color:var(--mut);margin-bottom:14px">${c.vence?`Venció el ${esc(fecha(c.vence))}. `:''}Cuando Carlos confirme tu pago volverás a ver tu rutina y tu plan.</p>
+ <a class="btn" href="${wa(C.wa,'Hola Carlos, soy '+c.nombre+'. Te envío el comprobante de mi pago de la mensualidad.')}" target="_blank" rel="noopener">Enviar comprobante por WhatsApp</a></div>
+ <div class="glass" style="margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:10px"><span><b>Mi ficha de ingreso</b><br><small style="color:var(--mut)">${FICHA&&FICHA.completa?'Completa ✓':'Pendiente: llénala mientras se activa tu plan'}</small></span><button class="btn sm sec" data-ficha>${FICHA&&FICHA.completa?'Editar':'Completar'}</button></div>`+(CS.remoto?'<p style="text-align:center;margin-top:24px"><button class="btn sec sm" id="salir">Cerrar sesión</button></p>':'');
+ const s=document.getElementById('salir');if(s)s.onclick=()=>{Sv.api.salir();location.reload()}}
+function pintar(){if(c.activa===false){inactivoUI();return}const H=hechos(),hi=hoyIdx();
+ m.innerHTML=`<div class="top"><div class="hd"><div><small>${esc(C.nombre.toUpperCase())} · PERSONAL TRAINER</small><h1>HOY</h1></div><a class="btn sm" href="${wa(C.wa,'Hola Carlos, soy '+c.nombre+'.')}" target="_blank" rel="noopener">WhatsApp</a></div>
+ <div class="wk" role="group" aria-label="Semana">${DN.map((l,i)=>{const d=rutinaDia(i),h=H[iso(i)],ok=d&&h&&h.length===d.ej.length;return `<button data-w="${i}" class="${i===hi?'hoy':''} ${d?'':'des'}" aria-pressed="${i===sel}" aria-label="${DL[i]}${d?'':' (descanso)'}">${l}${ok?'<i></i>':''}</button>`}).join('')}</div>
+ <div class="seg" role="tablist">${[['res','Resumen'],['ent','Entreno'],['com','Comidas'],['pro','Progreso'],['ej','Ejercicios']].map(([k,t])=>`<button role="tab" data-t="${k}" aria-selected="${k===tab}">${ic[k]}${t}</button>`).join('')}</div></div>
+ ${avisosHtml()}<p style="color:var(--mut);font-size:14px;margin:12px 0 0">${tab==='ent'||tab==='com'?`${DL[sel]}, ${fecha(iso(sel))}`:''}</p>`+V[tab]()+(CS.remoto?'<p style="text-align:center;margin-top:24px"><button class="btn sec sm" id="salir">Cerrar sesión</button></p>':'');
+ if(document.getElementById('salir'))document.getElementById('salir').onclick=()=>{Sv.api.salir();location.reload()};
+ const g=id=>document.getElementById(id);CH.contar(m);
+ if(g('nt'))g('nt').onclick=async()=>{try{await Notification.requestPermission()}catch(e){}pintar()};
+ if(tab==='pro'){if(g('cmp'))CS.comparador(g('cmp'),c.cid,false);const v=CS.ventana();document.querySelectorAll('[data-pv]').forEach(async i=>{i.src=await Sv.fotos.url(c.cid,v.fecha,i.dataset.pv)})}
+ if(g('fi'))g('fi').onchange=async e=>{const f=e.target.files[0];if(!f||!pickV)return;const v=CS.ventana(),er=g('fe');er.textContent='Subiendo foto…';try{await Sv.fotos.subir(c.cid,v.fecha,pickV,f);FOTOS=FOTOS.filter(x=>!(x.f===v.fecha&&x.v===pickV));FOTOS.push({f:v.fecha,v:pickV});pintar()}catch(x){er.textContent=x.message||'No se pudo subir la foto.'}};
+ if(g('rep'))g('rep').onclick=async()=>{const kg=+g('pe').value,rp=+g('rp').value;if(CS.remoto){try{await Sv.reportar(kg,rp,'')}catch(e){}}open(wa(C.wa,`Hola Carlos, soy ${c.nombre}. Reporte ${fecha(hoy())}: ${(H[iso(hi)]||[]).length} ejercicios hechos`+(kg?`, peso ${kg} kg`:'')+(rp?`, esfuerzo ${rp}/10`:'')+'.'),'_blank','noopener')}}
+async function marcar(k,j){const H=hechos(),a=H[k]||[],i=a.indexOf(j),on=i<0;on?a.push(j):a.splice(i,1);H[k]=a;if(!CS.remoto)LS.set(clave(),H);const y=scrollY;pintar();scrollTo(0,y);
+ if(CS.remoto){try{await Sv.marcar(k[0]==='m'?k.slice(1):k,(k[0]==='m'?'m':'e')+j,on)}catch(e){const b=H[k]||[],q=b.indexOf(j);on?b.splice(q,1):b.push(j);pintar();alert('No se pudo guardar. Revisa tu conexión.')}}}
+document.addEventListener('input',e=>{const t=e.target;if(reg&&t.dataset&&t.dataset.v){(reg.vals[t.dataset.s]??={})[t.dataset.v]=t.value}});
+document.addEventListener('click',e=>{const t=e.target.closest('[data-t]');if(t){tab=t.dataset.t;pintar();scrollTo(0,0);return}
+ const w=e.target.closest('[data-w]');if(w){sel=+w.dataset.w;if(tab!=='ent'&&tab!=='com')tab='ent';pintar();return}
+ if(e.target.closest('[data-ficha]')){CS.fichaWizard({cid:c.cid,ficha:FICHA,onClose:async()=>{try{FICHA=await Sv.ficha.cargar(c.cid,false)}catch(x){}pintar()}});return}
+ const rg=e.target.closest('[data-reg]');if(rg){abrirReg(+rg.dataset.reg);return}
+ if(e.target.closest('[data-cerrar]')){document.getElementById('dReg').close();return}
+ const ok=e.target.closest('[data-ok]');if(ok){const s=+ok.dataset.ok,W=reg&&CS.trabajo(reg.x.reps),g=reg&&setsDe(reg.e.id,reg.f).find(q=>q.s===s);if(W&&!g&&!(T&&T.tipo==='trabajo'&&T.s===s)){iniciarT('trabajo',W,`${reg.e.n} · serie ${s}`,reg.j,s);pintarReg()}else guardarSet(s);return}
+ const t15=e.target.closest('[data-t15]');if(t15&&T){T.fin+=+t15.dataset.t15*1000;T.total=Math.max(10,T.total+ +t15.dataset.t15);T.hecho=false;tick();return}
+ if(e.target.closest('[data-tstop]')){detenerT();pintarReg();return}
+ if(e.target.closest('#pill')&&T&&reg){document.getElementById('dReg').showModal();pintarReg();return}
+ const pk=e.target.closest('[data-pick]');if(pk){pickV=pk.dataset.pick;const fi=document.getElementById('fi');fi.value='';fi.click();return}
+ const k=e.target.closest('[data-ck]');if(k){marcar(iso(sel),+k.dataset.ck);return}const cm=e.target.closest('[data-cm]');if(cm){marcar('m'+iso(sel),+cm.dataset.cm);return}
+ const p=e.target.closest('[data-pdf]');if(p)Doc.imprimir(Doc[p.dataset.pdf](c),p.dataset.pdf+' - '+c.nombre)});
+/* ---------- acceso con cuenta (producción) ---------- */
+const frm=(t,cuerpo)=>{m.innerHTML=`<div class="card" style="margin-top:12vh"><h1 class="or" style="font-family:Orbitron;font-size:24px;margin-bottom:4px">${t}</h1>${cuerpo}</div>`};
+function authUI(msg,modo='in'){frm('MI PLAN',`<p style="color:var(--mut);margin-bottom:10px">${esc(C.nombre)} · Personal Trainer</p><div class="seg" style="margin-bottom:12px"><button data-m="in" aria-selected="${modo==='in'}">Ingresar</button><button data-m="up" aria-selected="${modo==='up'}">Crear cuenta</button></div>
+ <label>Correo<input id="em" type="email" autocomplete="username"></label><label style="margin-top:8px">Clave<input id="pw" type="password" autocomplete="${modo==='in'?'current-password':'new-password'}" minlength="8"></label>
+ <p id="er" role="alert" style="color:var(--bad);margin-top:8px;min-height:20px">${esc(msg||'')}</p><p style="margin-top:6px"><button class="btn" id="go">${modo==='in'?'Ingresar':'Crear mi cuenta'}</button></p>
+ ${modo==='in'?'<p style="margin-top:12px"><button class="btn sec sm" id="rec">Olvidé mi clave</button></p>':'<p style="color:var(--mut);font-size:13px;margin-top:10px">Usa el correo que quieras (mínimo 8 caracteres de clave). Después te pediremos el código que te dio Carlos.</p>'}`);
+ m.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>authUI('',b.dataset.m));
+ const er=t=>document.getElementById('er').textContent=t;
+ document.getElementById('go').onclick=async()=>{const e=document.getElementById('em').value.trim(),k=document.getElementById('pw').value;if(!e||k.length<8){er('Escribe tu correo y una clave de al menos 8 caracteres.');return}
+  try{if(modo==='in'){await Sv.api.login(e,k)}else{const ok=await Sv.api.registrar(e,k);if(!ok){authUI('Listo: revisa tu correo para confirmar la cuenta y luego ingresa.');return}}arrancar()}catch(x){er(x.message)}};
+ const rc=document.getElementById('rec');if(rc)rc.onclick=async()=>{const e=document.getElementById('em').value.trim();if(!e){er('Escribe tu correo arriba.');return}await Sv.api.recuperar(e);er('Si el correo existe, te enviamos un enlace para cambiar la clave.')}}
+function codigoUI(msg){frm('CÓDIGO DE INVITACIÓN',`<p style="color:var(--mut);margin-bottom:10px">Pega el código que te envió Carlos por WhatsApp para ver tu plan.</p><label>Código<input id="cd" autocomplete="off" autocapitalize="off" spellcheck="false"></label><p id="er" role="alert" style="color:var(--bad);margin-top:8px;min-height:20px">${esc(msg||'')}</p><p style="margin-top:6px"><button class="btn" id="go">Vincular</button> <button class="btn sec sm" id="out">Salir</button></p>`);
+ document.getElementById('out').onclick=()=>{Sv.api.salir();location.reload()};
+ document.getElementById('go').onclick=async()=>{const k=document.getElementById('cd').value.trim();try{if(await Sv.reclamar(k))arrancar();else codigoUI('Código incorrecto o ya usado. Pídele uno nuevo a Carlos.')}catch(e){codigoUI('No se pudo vincular: '+e.message)}}}
+async function arrancar(msg){
+ if(!CS.remoto){const o=await cargar();if(!o){m.innerHTML='<p class="vacio">No encontramos tu plan.<br>Pídele a Carlos tu enlace por WhatsApp.</p>';return}c=o;try{FICHA=await Sv.ficha.cargar(c.cid,false)}catch(e){}if(c.activa!==false){try{FOTOS=await Sv.fotos.lista(c.cid,false)}catch(e){}try{SERIES=await Sv.series.cargar(c.cid,false)}catch(e){}}sel=hoyIdx();pintar();return}
+ if(!Sv.api.hayCuenta())return authUI(msg);
+ let o;try{o=await Sv.miPlan()}catch(e){if(e.status===401||e.status===403){Sv.api.salir();return authUI('Tu sesión venció. Ingresa de nuevo.')}m.innerHTML='<p class="vacio">No se pudo conectar. Revisa tu internet e intenta de nuevo.</p>';return}
+ if(!o)return codigoUI();
+ (o.custom||[]).forEach(x=>{if(!EJ.get(x.id)){const e=EJ.agregarPersonalizado(x);e.id=x.id}});c=o;try{FICHA=await Sv.ficha.cargar(c.cid,false)}catch(e){}
+ if(c.activa===false){pintar();return}
+ try{FOTOS=await Sv.fotos.lista(c.cid,false)}catch(e){}try{SERIES=await Sv.series.cargar(c.cid,false)}catch(e){}
+ try{cache={};(await Sv.marcas(CS.dias(30))||[]).forEach(x=>{const k=x.k[0]==='m'?'m'+x.f:x.f;(cache[k]??=[]).push(+x.k.slice(1))})}catch(e){}
+ sel=hoyIdx();pintar()}
+arrancar();
+</script></body></html>
